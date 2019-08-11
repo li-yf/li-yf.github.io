@@ -1,7 +1,7 @@
 
 favor_file = ''
 import os, re
-for i in os.listdir("."):
+for i in os.listdir("D:\\"):
 	if re.match("Microsoft_Edge_‎.*.html", i):
 		favor_file = i
 		break
@@ -9,8 +9,9 @@ if favor_file == '':
 	print("favor file not found!")
 
 head_cnt = 7
-with open(favor_file, 'r', encoding='UTF-8') as f1:
-	with open("English-Listening.html", 'w', encoding='UTF-8') as f2:
+import os
+with open(os.sep.join(["D:", favor_file]), 'r', encoding='UTF-8') as f1:
+	with open("English-Listening-1010.html", 'w', encoding='UTF-8') as f2:
 
 		found = False
 		for line in f1:
